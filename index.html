@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="member_name"></h2> 
+    <img style="width: 30%;" id="family_member_image" src="fam.jpg" alt=""> <br>
+    <button onclick="update();" >Next>></button>
+
+    <script>
+        
+        var names= ["Aditi Budhraja Sarkar(Mom)", "Sushanta Sarkar(Dad)", "Madhu Budhraja(Grandma)", "Shyla Sarkar(Sister)", "Ayaan Sarkar(Me)"];
+        var images= ["mom.png", "dad.png", "grandma.png", "sister.png", "ayaan.jpg"];
+
+        var i = 0;
+        function update()
+        {
+          
+            var numbers_of_family_members_in_array = 5;
+            if(i > numbers_of_family_members_in_array)
+            {
+                i = 0;
+            };
+            var updatedimages = images[i];
+            var updatednames = names[i]
+            document.getElementById("family_member_image").src = updatedimages;
+            document.getElementById("member_name").innerHTML = updatednames;
+            i++;
+          
+
+        }
+    
+    
+    </script>
+</body>
+</html>
